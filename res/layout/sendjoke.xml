@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:umadsdk="http://schemas.android.com/apk/res/com.wj.joke"
+android:orientation="vertical"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#3a5362"
+>
+<TextView android:id="@+id/title"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:textSize="25dip"
+	android:paddingTop="1dip"
+	android:paddingBottom="1dip"
+	android:singleLine="true"
+	android:gravity="center_horizontal"
+	android:textColor="#ffffff"
+	android:text="@string/app_name"
+	android:layout_alignParentTop="true"
+	/>
+<net.youmi.android.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        umadsdk:backgroundColor="#4076AA"
+        umadsdk:backgroundTransparent="255"
+        umadsdk:textColor="#ffffff" 
+        >
+    </net.youmi.android.AdView>
+<ScrollView
+android:layout_weight="1"
+android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+>
+<TextView android:id="@+id/content"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:textSize="20dip"
+	android:singleLine="false"
+	android:text=""
+	android:gravity="left|top"
+	android:textColor="#ffffff"
+	/> 
+</ScrollView>
+  
+<LinearLayout android:orientation="horizontal" android:layout_gravity="bottom" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+<Button android:id="@+id/weibo_cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:onClick="onPrev"
+	android:text="上一则"/>
+<Button android:id="@+id/weibo_resend"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:onClick="onSmsSend"
+	android:text="短信分享"/>
+<Button android:id="@+id/weibo_replay"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:onClick="onWeiboSend"
+	android:text="微博分享"/>
+<Button android:id="@+id/weibo_cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:onClick="onNext"
+	android:text="下一则"/>
+</LinearLayout>
+</LinearLayout>

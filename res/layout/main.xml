@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:umadsdk="http://schemas.android.com/apk/res/com.wj.joke"
+android:gravity="center_horizontal"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#3a5362"
+>
+
+    <TextView android:id="@+id/title"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:textSize="15px"
+	android:paddingTop="3px"
+	android:singleLine="true"
+	android:gravity="center_horizontal"
+	android:textColor="#ffffff"
+	android:text="@string/app_name"
+	android:layout_alignParentTop="true"
+	/>
+
+<ListView android:id="@android:id/list"
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/title"
+    android:dividerHeight="2px"
+    android:drawSelectorOnTop="false"
+    />
+<net.youmi.android.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        umadsdk:backgroundColor="#4076AA"
+        umadsdk:backgroundTransparent="255"
+        
+        umadsdk:textColor="#ffffff" 
+        >
+    </net.youmi.android.AdView>
+</RelativeLayout>

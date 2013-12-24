@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="#3a5362"
+    android:scrollbars="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:gravity="top"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#3a5362"
+>
+<TextView android:id="@+id/weibochoice"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3px"
+	android:singleLine="false"
+	android:gravity="center_horizontal"
+	android:textColor="#ffffff"
+	android:layout_alignParentTop="true"
+	android:text="选择分享微博"
+	/>
+<LinearLayout 
+	android:id="@+id/checkgroup"
+	android:gravity="left"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/weibochoice"
+>
+<CheckBox android:id="@+id/check1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:checked="true"
+		android:text="新浪微博"
+>
+</CheckBox>
+<CheckBox android:id="@+id/check2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:checked="true"
+		android:text="网易微博"
+>
+</CheckBox>
+<CheckBox android:id="@+id/check3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:checked="true"
+		android:text="腾讯微博"
+>
+</CheckBox>
+</LinearLayout>
+<Button android:id="@+id/weibo_send"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/checkgroup"
+	android:onClick="onSend"
+	android:text="分享"/>
+<Button android:id="@+id/cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_toRightOf="@id/weibo_send"
+	android:layout_below="@id/checkgroup"
+	android:onClick="onBack"
+	android:text="返回"/>
+<TextView android:id="@+id/weibo10content"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="5px"
+	android:singleLine="false"
+	android:gravity="center_horizontal"
+	android:textColor="#ffffff"
+	android:layout_below="@id/weibo_send"
+	android:text="开通微博"
+	/>
+<RadioGroup android:id="@+id/radiogroup"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/weibo10content"
+	>
+	<RadioButton android:id="@+id/radio1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:checked="true"
+		android:text="新浪微博"
+	/>
+	<RadioButton android:id="@+id/radio2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="网易微博"
+	/>
+	<RadioButton android:id="@+id/radio3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="腾讯微博"
+	/>
+	</RadioGroup>
+<Button android:id="@+id/weibo_ok"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/radiogroup"
+	android:onClick="onWeiboSend"
+	android:text="开通"/>
+<Button android:id="@+id/weibo_cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_toRightOf="@id/weibo_ok"
+	android:layout_below="@id/radiogroup"
+	android:onClick="onBack"
+	android:text="返回"/>
+  <TextView android:id="@+id/content"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:textSize="20dip"
+	android:layout_below="@id/weibo_cancel"
+	android:singleLine="false"
+	android:text=""
+	android:gravity="left|top"
+	android:textColor="#ffffff"
+	/>   
+</RelativeLayout>
+
+</ScrollView>

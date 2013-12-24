@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#3a5362"
+    android:scrollbars="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:gravity="top"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#3a5362"
+>
+
+    <TextView android:id="@+id/weibo10content"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:singleLine="false"
+	android:textSize="23dip"
+	android:gravity="center_horizontal"
+	android:textColor="#ffffff"
+	android:layout_alignParentTop="true"
+	android:text="注册个人信息"
+	/>
+<TextView android:id="@+id/uname"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="5dip"
+	android:singleLine="true"
+	android:textSize="27dip"
+	android:gravity="left"
+	android:textColor="#ffffff"
+	android:text="用户名："
+	android:layout_below="@id/weibo10content"
+>
+</TextView>
+<EditText android:id="@+id/name"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="3dip"
+	android:singleLine="true"
+	android:gravity="left|bottom"
+	android:layout_below="@id/uname">
+</EditText>
+<TextView android:id="@+id/upwd"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="5dip"
+	android:singleLine="true"
+	android:textSize="23dip"
+	android:gravity="left"
+	android:textColor="#ffffff"
+	android:text="密码："
+	android:layout_below="@id/name"
+>
+</TextView>
+<EditText android:id="@+id/pwd"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="3dip"
+	android:singleLine="true"
+	android:gravity="left"
+	android:layout_below="@id/upwd">
+</EditText>
+<TextView android:id="@+id/unick"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="5dip"
+	android:singleLine="true"
+	android:textSize="23dip"
+	android:gravity="left"
+	android:textColor="#ffffff"
+	android:text="昵称："
+	android:layout_below="@id/pwd"
+>
+</TextView>
+<EditText android:id="@+id/nick"
+android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="3dip"
+	android:paddingLeft="3dip"
+	android:singleLine="true"
+	android:gravity="left"
+	android:layout_below="@id/unick">
+</EditText>
+<Button android:id="@+id/weibo_ok"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/nick"
+	android:onClick="onSend"
+	android:text="提交"/>
+<Button android:id="@+id/weibo_cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_toRightOf="@id/weibo_ok"
+	android:layout_below="@id/nick"
+	android:onClick="onBack"
+	android:text="返回"/>
+    
+</RelativeLayout>
+</ScrollView>
